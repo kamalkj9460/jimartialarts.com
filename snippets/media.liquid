@@ -184,12 +184,13 @@
             {%- endif -%}
             {%- if video_type == 'mp4' -%}
               <video
+                preload="none" id='myVideo'
                 playsinline
                 {% if video_looping %}loop{% endif %}
                 {% if video_style == 'muted' %}muted{% endif %}
                 {% if video_style == 'unmuted' %}controls{% endif %}
                 controlsList="nodownload"
-                poster="{{ media.preview_image | img_url: product_image_size }}"
+                data-poster="{{ media.preview_image | img_url: product_image_size }}"
                 data-image-count="{{ product.media.size }}"
                 data-video-type="{{ video_type }}"
                 data-video-style="{{ video_style }}"

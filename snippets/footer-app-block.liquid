@@ -1,0 +1,24 @@
+<div id="shopify-block-4275615285897611771" class="shopify-block shopify-app-block">
+<!-- // BEGIN // Fera.ai App Embed Code - DO NOT MODIFY // -->
+<script type="lazyload_int">
+  (() => {
+    window.fera = window.fera || []; let loaded = false;
+    const load = () => {
+      // Fera Shopify App Embed v1701382813
+      loaded = true; const fkey = "pk_6777802c83d73c709a1acd83e919426096bf02fb06e5863d04b686c936f3b0ba"; const fdomain = "e6e10b-2.myshopify.com";const baseCdnUrl = `https://cdn.fera.ai/js/v2/`;window.fera.push({ action: "loadPlatformAdapter", code: "shopify" }); window.fera.push({ action: "configure", data: { store_pk: fkey || fdomain }} );if (!window.fera.version && !document.getElementById('fera_js') && !document.querySelector('[data-app-id][src*="fera.js"]')) { const el = document.createElement('script');el.src = `${ baseCdnUrl }fera.js`;el.id = "fera_js";el.async = true; document.body.append(el); }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("no_fera")) {
+      // no Fera
+    } else if (urlParams.get("delay_fera") || navigator.userAgent.match(new RegExp(atob("bW90byBn"), 'i'))) {
+      setTimeout(() => loaded || load(), parseInt(urlParams.get("delay_fera") || 15000));
+      window.addEventListener('mousemove', () => loaded || load(), { once: true, passive: true });
+      document.addEventListener('scroll', () => loaded || load());
+    } else {
+      load();
+    }
+  })();
+</script>
+<!-- // END // Fera.ai App Embed Code // -->
+</div>

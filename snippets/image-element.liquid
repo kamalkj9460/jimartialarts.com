@@ -118,6 +118,7 @@
                   role: role,
                   aria-hidden: ariaHidden,
                   style: style
+      | replace: ' src="' , ' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-class="LazyLoad" data-src="' | replace: ' srcset="' , ' data-srcset="' 
     }}
   {% else %}
     {% if img_width == blank %}
@@ -136,6 +137,7 @@
                   role: role,
                   aria-hidden: ariaHidden,
                   style: style
+      | replace: ' src="' , ' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-class="LazyLoad" data-src="' | replace: ' srcset="' , ' data-srcset="'
     }}
   {% endif %}
 {% elsif type == 'photoswipe' %}
@@ -146,13 +148,13 @@
     {% endfor %}
   {%- endcapture -%}
   {% assign img_width = widthsArray | last %}
-  <img src="{{ img | image_url: width: img_width }}"
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-class="LazyLoad" data-src="{{ img | image_url: width: img_width }}"
     width
     height
     class="{{ classes }}"
     loading="{{ loading }}"
     alt="{{ alt }}"
-    srcset="{{ img_widths }}"
+    data-srcset="{{ img_widths }}"
     data-photoswipe-src="{{ img | image_url: width: product_zoom_size, format: format }}"
     data-photoswipe-width="{{ media_width }}"
     data-photoswipe-height="{{ media_height }}"

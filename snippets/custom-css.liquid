@@ -1,0 +1,47 @@
+<style>
+html:not(.w3_start) body.template-product .product__photos .product__main-photos .product-main-slide:nth-child(n+2) img {
+    opacity: 0 !important;
+}
+html:not(.jsload) div#Slideshow-template--22038006563112__slideshow .hero__image  {
+    opacity: 1 !important;
+    transition: none !important;
+}
+ .slideshow__slide .hero__image-wrapper, [data-aos=hero__animation] .hero__image-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+body.template-list-collections .image-element, body.template-collection .image-element{
+    opacity: 1 !important;
+}
+{% unless canonical_url contains '/cart' %}
+ html:not(.jsload) .image-element {
+    animation: none !important;
+}
+{% endunless %}
+body.template-product .product__main-photos .product-main-slide .image-element {
+    animation: none !important;
+}
+body.template-product .product__thumb-item .image-element {
+    animation: none !important;
+}
+[data-aos=overflow__animation] {
+    transform: none !important;
+    transition: none !important;
+}
+.section-header--flush {
+    margin-bottom: 0;
+}
+.site-header__logo img {
+    opacity: 1 !important;
+}
+.shopify-payment-button__button--hidden {
+    display: block !important;
+}
+/* .aos-animate[data-aos=image-fade-in] .image-element {
+    animation: none !important;
+} */
+html:not(.w3_start) .needsclick.kl-private-reset-css-Xuajs1 {
+    display: none;
+}
+</style>
